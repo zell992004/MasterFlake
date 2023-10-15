@@ -10,6 +10,6 @@
     ./rofi.nix
     ./kitty.nix
     ./neovim.nix
-    ,/dunst.nix
+    ./dunst.nix
     ];
 }
