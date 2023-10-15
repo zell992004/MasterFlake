@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../apps/zshconf.nix
+      ../../common/apps/zshconf.nix
     ];
 
   # Bootloader.

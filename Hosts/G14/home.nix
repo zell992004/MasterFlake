@@ -5,15 +5,15 @@
   imports = [
    #    ../apps/steam.nix
 #    ../apps/code.nix
-    ../../apps/hypr/hyprland.nix
-    ../../apps/hypr/waybar.nix
-    ../../apps/wofi.nix
-    ../../apps/barrier.nix
-    ../../apps/zshconf.nix
-    ../../apps/git.nix # looks for ./git/defualt.nix
-    ../../apps/rofi.nix
-    ../../apps/kitty.nix
-    ../../apps/emacs.nix
+ #   ../../apps/common/hypr/hyprland.nix
+ #   ../../apps/common/hypr/waybar.nix
+ #   ../../apps/common/barrier.nix
+#    ../../apps/common/zshconf.nix
+#    ../../apps/common/git.nix # looks for ./git/defualt.nix
+#    ../../apps/common/rofi.nix
+#    ../../apps/common/kitty.nix
+#    ../../apps/common/neovim.nix
+      ../../apps/common/common.nix
     ];
     
   # The User and Path it manages

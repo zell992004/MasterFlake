@@ -1,5 +1,5 @@
 {
- programs.emacs = {
+ programs.neovim = {
 	enable = true;
 	};
 
