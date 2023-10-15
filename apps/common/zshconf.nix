@@ -25,7 +25,7 @@
       _ = "sudo";
       h = "history";
       hg = "history | grep ";
-      n = "sudo nixos-rebuild switch --flake ~/hyprland1";
+      n = "nixos-rebuild switch --flake MasterFlake/#";
     };
    };
 }
