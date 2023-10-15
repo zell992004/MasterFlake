@@ -1,0 +1,169 @@
+    style = ''
+      @import "themes/mocha.css";
+
+      * {
+        font-size: ${toString config.gtk.font.size}px;
+        font-family: ${config.gtk.font.name}, "Font Awesome 6 Free";
+        font-weight: bold;
+        border-radius: 2px;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      tooltip {
+        background: @crust;
+      }
+
+      window#waybar {
+        /* background: transparent; */
+        background: @base;
+        border-bottom: 2px solid @mantle;
+      }
+
+      * :hover {
+        box-shadow: none;
+        text-shadow: none;
+        border: none;
+        background: transparent;
+      }
+
+      .modules-left,
+      .modules-center,
+      .modules-right {
+        border-bottom: 2px solid @mantle;
+      }
+
+      .modules-left,
+      .modules-center {
+        background: @base;
+      }
+
+      .modules-left {
+        padding: 0 5px;
+      }
+
+      #clock,
+      #custom-medialeft,
+      #custom-media,
+      #custom-mediaright,
+      #pulseaudio,
+      #temperature,
+      #custom-fan,
+      #network
+      #battery {
+        color: @text;
+        margin: 0 6px;
+        padding: 0 5px;
+        background: @base;
+      }
+
+      #network {
+        margin: 0 10 0 5px;
+      }
+      #battery {
+        margin: 0 15 0 5px;
+      }
+
+      #clock {
+        border: none;
+      }
+
+      #workspaces button {
+        color: @text;
+      }
+
+      #workspaces button.active {
+        color: @pink;
+      }
+
+      #custom-media {
+        margin: 0;
+        padding: 0;
+        border-left-style: none;
+        border-right-style: none;
+        border-radius: 0;
+      }
+      #custom-medialeft {
+        padding: 0 5px;
+        border-radius: 2px 0 0 2px;
+        border-right-style: none;
+        margin: 0 0 0 5px;
+      }
+      #custom-mediaright {
+        padding: 0 5px;
+        border-radius: 0 2px 2px 0;
+        border-left-style: none;
+        margin: 0 5px 0 0;
+      }
+
+      #battery {
+        margin: 0 0 0 5px;
+      }
+
+      #battery.warning {
+        color: @peach;
+      }
+      #battery.critical {
+        color: @red;
+      }
+      #battery.charging {
+        color: @green;
+      }
+    '';
+  };
+  
+  
+  
+  xdg.configFile = {
+    "waybar/themes/mocha.css".text = cssColor {
+      base = "#1e1e2e";
+      mantle = "#181825";
+      crust = "#11111b";
+
+      text = "#cdd6f4";
+      subtext0 = "#a6adc8";
+      subtext1 = "#bac2de";
+
+      surface0 = "#313244";
+      surface1 = "#45475a";
+      surface2 = "#585b70";
+
+      overlay0 = "#6c7086";
+      overlay1 = "#7f849c";
+      overlay2 = "#9399b2";
+
+      blue = "#89b4fa";
+      lavender = "#b4befe";
+      sapphire = "#74c7ec";
+      sky = "#89dceb";
+      teal = "#94e2d5";
+      green = "#a6e3a1";
+      yellow = "#f9e2af";
+      peach = "#fab387";
+      maroon = "#eba0ac";
+      red = "#f38ba8";
+      mauve = "#cba6f7";
+      pink = "#f5c2e7";
+      flamingo = "#f2cdcd";
+      rosewater = "#f5e0dc";
+    };
+  };
+
+  # Removed from hyperland
+  animations {
+    enabled = true
+          bezier = md3_standard, 0.2, 0.0, 0, 1.0
+          bezier = md3_decel, 0.05, 0.7, 0.1, 1
+          bezier = md3_accel, 0.3, 0, 0.8, 0.15
+          bezier = overshot, 0.05, 0.9, 0.1, 1.05
+          bezier = hyprnostretch, 0.05, 0.9, 0.1, 1.0
+          bezier = win10, 0, 0, 0, 1
+          bezier = gnome, 0, 0.85, 0.3, 1
+          bezier = funky, 0.46, 0.35, -0.2, 1.2
+          animation = windows, 1, 2, overshot, slide
+          animation = border, 1, 10, default
+          animation = fade, 1, 0.0000001, default
+          animation = workspaces, 1, 4, md3_decel, slide
+        }
+  
