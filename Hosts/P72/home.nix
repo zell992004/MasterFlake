@@ -3,16 +3,6 @@
 {
   # if you config gets too long, split it up into smaller modules
   imports = [
-   #    ../apps/steam.nix
-#    ../apps/code.nix
- #   ../../apps/common/hypr/hyprland.nix
- #   ../../apps/common/hypr/waybar.nix
- #   ../../apps/common/barrier.nix
-#    ../../apps/common/zshconf.nix
-#    ../../apps/common/git.nix # looks for ./git/defualt.nix
-#    ../../apps/common/rofi.nix
-#    ../../apps/common/kitty.nix
-#    ../../apps/common/neovim.nix
       ../../apps/common/common.nix
     ];
     
