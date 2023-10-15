@@ -45,7 +45,7 @@
       zellmain = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./Hosts/G14/Configuration.nix
+          ./Hosts/G14/configuration.nix
             {
               home-manager.users.zell = ./Hosts/G14/home.nix;
             }
