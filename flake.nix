@@ -33,7 +33,6 @@
       hyprland = nixpkgs.lib.nixosSystem {
         modules = [
           ./Hosts/P72/configuration.nix
-          nixos-hardware.nixosModules.asus-zephyrus-ga401
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -48,6 +47,7 @@
         system = "x86_64-linux";
         modules = [
           ./Hosts/G14/configuration.nix
+          nixos-hardware.nixosModules.asus-zephyrus-ga401
           home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
