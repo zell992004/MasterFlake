@@ -47,6 +47,8 @@
         modules = [
           ./Hosts/G14/configuration.nix
             {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
               home-manager.users.zell = ./Hosts/G14/home.nix;
             }
         ];
