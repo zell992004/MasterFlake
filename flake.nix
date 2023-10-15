@@ -10,8 +10,24 @@
   };
 
 
- outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
+ outputs = inputs@{ nixpkgs, home-manager, ... }: 
+  let
+  homeManagerConfFor = config;
+
+  zellmain = home-manager.lib.homeManagerConfiguration {
+    system = "x86_64-linux";
+    modules = [
+      ./Hosts/G14/Configuration.nix
+      home-manager.nixModules.home-manager
+      {home-manager.users.zell =
+        homeManagerConfFor ./Hosts/G14/Configurations.nix
+      };
+    ];
+    extraSpecialArgs = { inherit nixpkgs; };
+  }
+
+  in {
+    nixosConfigurations = nixpkgs.lib.nixosSystem {
       hyprland = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
@@ -20,28 +36,14 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.zell = import ./Hosts/P72/home.nix;
+            home-manager.users.zell = homeManagerConfFor ./Hosts/P72/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
         ];
+        specialArgs = {inherit nixpkgs; };
       };
+      defaultPackage.x86_64-linux = zellmain.actionPackage;
     };
-  };
-
-    nixosConfigurations = {
-      zellmain = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          home-manager.nixModules.home-manager
-          ./Hosts/G14/configuration.nix
-          {
-            home-manager.useGlobalPackages = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.zell = import ./Hosts/P72/home.nix
-          }
-        ]
-      }
-    }
-
+  }
 }
