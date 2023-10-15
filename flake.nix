@@ -13,7 +13,7 @@
  outputs = inputs@{ nixpkgs, home-manager, ... }: 
   let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system}
+    pkgs = nixpkgs.legacyPackages.${system};
 #  homeManagerConfFor = config:
 
 #  zellmain = home-manager.lib.homeManagerConfiguration {
@@ -50,9 +50,8 @@
               home-manager.users.zell = ./Hosts/G14/Configurations.nix;
             }
         ];
-    extraSpecialArgs = { inherit nixpkgs; };
-        };
-
+      };
     };
-  }
+  };
+}
 
