@@ -11,7 +11,7 @@
   };
 
 
- outputs = inputs@{ nixpkgs, home-manager, nixis-hardware, ... }: 
+ outputs = inputs@{ nixpkgs, home-manager, nixos-hardware, ... }: 
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
