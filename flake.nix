@@ -47,7 +47,7 @@
         modules = [
           ./Hosts/G14/Configuration.nix
             {
-              home-manager.users.zell = ./Hosts/G14/Configurations.nix;
+              home-manager.users.zell = ./Hosts/G14/home.nix;
             }
         ];
       };
