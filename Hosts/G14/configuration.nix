@@ -14,7 +14,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.kernelModules = ["amdgpu"];
+  boot.initrd.kernelModules = [ "nvidia"];
   networking.hostName = "zellmain"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -133,12 +133,12 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
     enable = true;
     portalPackage = pkgs.xdg-desktop-portal-hyprland;
     xwayland.enable = true;
-  #  enableNvidiaPatches = true;
+    enableNvidiaPatches = true;
   };
 
   services.xserver = {
     enable = true;
-   videoDrivers = [ "modesetting" ];
+   videoDrivers = [ "nvidia" ];
     displayManager.gdm = {
       enable = true;
       wayland = true;
@@ -147,20 +147,10 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
 
   services.avahi.enable  = true;
 
-  hardware = {
-    opengl = {
-      enable = true;
-      extraPackages = with pkgs; [
-	rocm-opencl-icd
-	rocm-opencl-runtime
-        amdvlk
-	];
-      extraPackages32 = with pkgs; [
-	driversi686Linux.amdvlk
-	];
-      driSupport = true;
-      driSupport32Bit = true;
-    };
+#  hardware = {
+#    opengl = {
+#      enable = true;
+#         };
 
 #    nvidia = {
 #      modesetting.enable = true;
@@ -170,10 +160,12 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
 #      package = config.boot.kernelPackages.nvidiaPackages.stable;
 #      prime = {
 #        sync.enable = true;
-#        intelBusId = 
-#      };
+# 
+ #      intelBusId = "PCI::4:0:0";
+#	nvidiaBusId = "PCI:4:0:0"; 
+#     };  
 #    };
-      };
+ #     };
 
 xdg = {
   sounds.enable = true;
