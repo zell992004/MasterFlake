@@ -139,7 +139,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
 
   services.xserver = {
     enable = true;
-   videoDrivers = [ "amdgpu" ];
+   videoDrivers = [ "modesetting" ];
     displayManager.gdm = {
       enable = true;
       wayland = true;
