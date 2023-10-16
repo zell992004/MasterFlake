@@ -4,16 +4,19 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestions.enable = true;
+    enableAutosuggestions = true;
    # enableVteIntegrations.enable = true;
 
    # initExtra = "
    #     ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)
    #     ";
   
-    syntaxHighlighting = {
+    syntaxHighlightingModule = {
       enable = true;
-     
+      styles = {
+      "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
+      }
+
     };
     
     #ohmyzsh = { 
@@ -30,6 +33,15 @@
       n = "sudo nixos-rebuild switch --flake MasterFlake/#";
       clrgenhist = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2";
     };
+
+    zsh_theme_enable = "prompt_powerlevel9k_teardown";
+
+     historyModule = {
+        expireDuplicatesFirst = true;
+        save = 100000000;
+        size = 1000000000;
+      };
+
   };
 }
 

@@ -101,7 +101,7 @@
   ];
   #Program Env Things
 
-  environment.PathToLink = [ "/share/zsh/" ];
+  #environment.PathToLink = [ "/share/zsh/" ];
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
