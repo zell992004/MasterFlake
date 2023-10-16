@@ -26,6 +26,7 @@
       h = "history";
       hg = "history | grep ";
       n = "nixos-rebuild switch --flake MasterFlake/#";
+      clrgenhist = " sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2"
     };
    };
 }
