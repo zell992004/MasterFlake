@@ -33,5 +33,6 @@
     htop
     lshw
     discord
+    cura
     ];
 }
