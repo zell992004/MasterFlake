@@ -34,7 +34,7 @@
     lshw
     discord
     cura
-    inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
+    hyprbars
 
     ];
 }
