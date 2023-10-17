@@ -12,11 +12,11 @@
    #     save = 100000000;
    #     size = 1000000000;
    #     };
-    syntaxHighlightingModule = {
-    enable = true;
-    styles = 
-    "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
-     };
+   # syntaxHighlightingModule = {
+   # enable = true;
+   # styles = 
+   # "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
+   #  };
    # programs.zsh.oh-my-zsh = {
    #   enable = true;
    #   plugins = "oh-my-matrix";
