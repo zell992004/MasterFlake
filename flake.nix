@@ -17,12 +17,12 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     inherit (hyprland.inputs) nixpkgs;
-    withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system.legacyPackegs.${system});
+    withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system.legacyPackages.${system});
 
  in{
      packages = withPkgsFor (system: pkgs: {
 	hyprbars = pkgs.callPackage ./hyprbars {
-		inherit (hyprland.packages.x86_64) hyprland;
+		inherit (hyprland.packages.${system}) hyprland;
 		stdenv = pkgs.gcc13Stdenv;
 		};
 	});
