@@ -6,12 +6,12 @@
     enableCompletion = true;
     enableAutosuggestions = true;
     
-     history = {
-        enable = true;
-        expireDuplicatesFirst = true;
-        save = 100000000;
-        size = 1000000000;
-      };
+     
+        #histenable = true;
+      #  histexpireDuplicatesFirst = true;
+        histsave = 100000000;
+        histsize = 1000000000;
+      
     syntaxHighlightingModule = {
       enable = true;
       styles = 
