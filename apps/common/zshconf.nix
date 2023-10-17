@@ -5,22 +5,17 @@
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
-   # dotDir = ".config/zsh";
-   # history = {
-   #     enable = true;
-   #     expireDuplicatesFirst = true;
-   #     save = 100000000;
-   #     size = 1000000000;
-   #     };
-   # syntaxHighlightingModule = {
-   # enable = true;
-   # styles = 
-   # "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
-   #  };
-   # programs.zsh.oh-my-zsh = {
-   #   enable = true;
-   #   plugins = "oh-my-matrix";
-   #   theme = "ZSH_THEME = random";
+    #dotDir = ".config/zsh";
+     history = {
+        enable = true;
+        expireDuplicatesFirst = true;
+        save = 100000000;
+        size = 1000000000;
+        };
+    #syntaxHighlightingModule = {
+    #enable = true;
+  #  styles = 
+  #  "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
    # };
     shellAliases = {
       _ = "sudo";
@@ -32,6 +27,13 @@
       zsh_theme_disable = "prompt_powerlevel9k_setup";
     };
   };
+
+ programs.zsh.oh-my-zsh = {
+      enable = true;
+      plugins = "oh-my-matrix";
+      theme = "ZSH_THEME = random";
+    };
+
 }
 
 

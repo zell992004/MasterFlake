@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../apps/common/zshconf.nix
+      #../../apps/common/zshconf.nix
     ];
 
   # Bootloader.
@@ -167,5 +167,7 @@ xdg = {
     enable = true;
     enableExtensionPack = true;
    };
+
+   programs.zsh.enable = true;
 
   }
