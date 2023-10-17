@@ -1,4 +1,4 @@
-{ config, pkgs, home-manager, ...}:
+{ config, pkgs, home-manager,hyprland, self, ...}:
 
 {
   # if you config gets too long, split it up into smaller modules
