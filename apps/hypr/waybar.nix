@@ -127,4 +127,7 @@ in
           format = "{temperatureC}°C";
           format-alt = "{temperatureF}°F";
         };
-      }
+      };
+    };
+};
+}
