@@ -5,23 +5,23 @@
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
-    
-     
-        #histenable = true;
-      #  histexpireDuplicatesFirst = true;
-        histsave = 100000000;
-        histsize = 1000000000;
-      
+    dotDir = ".config/zsh";
+    history = {
+        enable = true;
+        expireDuplicatesFirst = true;
+        save = 100000000;
+        size = 1000000000;
+        };
     syntaxHighlightingModule = {
-      enable = true;
-      styles = 
-      "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
-       };
-   programs.zsh.oh-my-zsh = {
+    enable = true;
+    styles = 
+    "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
+     };
+    programs.zsh.oh-my-zsh = {
       enable = true;
       plugins = "oh-my-matrix";
       theme = "ZSH_THEME = random";
-   } ;
+    };
     shellAliases = {
       _ = "sudo";
       h = "history";

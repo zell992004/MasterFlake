@@ -77,7 +77,7 @@
   users.users.zell = {
     isNormalUser = true;
     description = "zell";
-    extraGroups = [ "networkmanager" "wheel" "plocate" "vboxusers"];
+    extraGroups = [ "networkmahistnager" "wheel" "plocate" "vboxusers"];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -150,26 +150,6 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
   };
 
   services.avahi.enable  = true;
-
-#  hardware = {
-#    opengl = {
-#      enable = true;
-#         };
-
-#    nvidia = {
-#      modesetting.enable = true;
-#      powerManagement.enable = false;
-#      powerManagement.finegrained = false;
-#      nvidiaSettings = true;
-#      package = config.boot.kernelPackages.nvidiaPackages.stable;
-#      prime = {
-#        sync.enable = true;
-# 
- #      intelBusId = "PCI::4:0:0";
-#	nvidiaBusId = "PCI:4:0:0"; 
-#     };  
-#    };
- #     };
 
 xdg = {
   sounds.enable = true;

@@ -32,5 +32,6 @@
     nvtop
     htop
     lshw
+    discord
     ];
 }
