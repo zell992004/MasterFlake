@@ -8,7 +8,7 @@
       st = "status";
     };
   };
-  programs.git-credential-oauth = {
+  programs.gitui = {
 	enable = true;
  };
 }
