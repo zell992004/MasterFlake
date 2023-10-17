@@ -22,8 +22,8 @@
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
 monitor=eDP-1,preferred,3600x0,auto
-monitor=DP-4,preferred,1680x0,auto
-monitor=DP-5,preferred,0x0,auto
+monitor=DP-2,preferred,1680x0,auto
+monitor=DP-3,preferred,0x0,auto
 
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
