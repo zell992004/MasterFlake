@@ -15,18 +15,6 @@
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-#  homeManagerConfFor = config:
-
-#  zellmain = home-manager.lib.homeManagerConfiguration {
-#    system = "x86_64-linux";
-#    modules = [
-#      ./Hosts/G14/Configuration.nix
-#      {
-#        home-manager.users.zell = homeManagerConfFor ./Hosts/G14/Configurations.nix;
-#       }
-#      ];
-#    extraSpecialArgs = { inherit nixpkgs; };
-#  };
 
  in {
     nixosConfigurations = {
