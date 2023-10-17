@@ -199,7 +199,7 @@ bindm = $mainMod, mouse:273, resizewindow
       "-all"
      ];
    plugins = [
-   pkgs.hyprbars
+   inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
    ];
    };
 	# enableNvidiaPatches = true;
