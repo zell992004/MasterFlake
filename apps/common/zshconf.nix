@@ -14,7 +14,9 @@
         };
     syntaxHighlighting = {
     enable = true;
-   # styles = "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
+   # styles = [ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)
+    
+    #];
     };
     
     shellAliases = {
@@ -30,7 +32,7 @@
 
  programs.zsh.oh-my-zsh = {
       enable = true;
-      plugins = [github:amstrad/oh-my-matrix];
+      plugins = [./Plugins/oh-my-matrix];
       theme = "ZSH_THEME = random";
     };
 }
