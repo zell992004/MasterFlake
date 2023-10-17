@@ -19,15 +19,15 @@
     inherit (hyprland.inputs) nixpkgs;
     withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system.legacyPackages.${system});
 
- in{
-     packages = withPkgsFor (system: pkgs: {
+        packages = withPkgsFor (system: pkgs: {
 	hyprbars = pkgs.callPackage ./hyprbars {
 		inherit (hyprland.packages.${system}) hyprland;
 		stdenv = pkgs.gcc13Stdenv;
 		};
 	});
 
-    nixosConfigurations = {
+ in{
+     nixosConfigurations = {
       hyprland = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
