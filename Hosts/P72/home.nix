@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, home-manager, ...}:
 
 {
   # if you config gets too long, split it up into smaller modules
