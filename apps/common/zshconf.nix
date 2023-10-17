@@ -6,36 +6,22 @@
     enableCompletion = true;
     enableAutosuggestions = true;
     
-   #  history = {
-   #     enable = true;
-   #     expireDuplicatesFirst = true;
-   #     save = 100000000;
-   #     size = 1000000000;
-   #   };
-
-   
-   
-   # enableVteIntegrations.enable = true;
-
-   # initExtra = "
-   #     ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)
-   #     ";
-  
-   # syntaxHighlightingModule = {
-   #   enable = true;
-   #   styles = 
-   #   "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
-   #    };
-   #programs.zsh.oh-my-zsh = {
-   #   enable = true;
-   #   plugins = "oh-my-matrix";
-   #   theme = "ZSH_THEME = random";
-   #} ;
-   # ohMyZsh = { 
-   #  enable = true;
-   #   theme = "ZSH_THEME = random";
-   # };
-
+     history = {
+        enable = true;
+        expireDuplicatesFirst = true;
+        save = 100000000;
+        size = 1000000000;
+      };
+    syntaxHighlightingModule = {
+      enable = true;
+      styles = 
+      "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
+       };
+   programs.zsh.oh-my-zsh = {
+      enable = true;
+      plugins = "oh-my-matrix";
+      theme = "ZSH_THEME = random";
+   } ;
     shellAliases = {
       _ = "sudo";
       h = "history";
@@ -45,9 +31,6 @@
       zsh_theme_enable = "prompt_powerlevel9k_teardown";
       zsh_theme_disable = "prompt_powerlevel9k_setup";
     };
-
-    
-
   };
 }
 
