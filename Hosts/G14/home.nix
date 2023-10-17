@@ -34,5 +34,6 @@
     lshw
     discord
     cura
+    hyprbars
     ];
 }
