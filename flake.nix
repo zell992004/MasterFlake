@@ -20,6 +20,7 @@
  in {
     nixosConfigurations = {
       hyprland = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
         modules = [
           ./Hosts/P72/configuration.nix
           home-manager.nixosModules.home-manager
