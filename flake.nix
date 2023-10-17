@@ -29,8 +29,13 @@
 
     nixosConfigurations = {
       hyprland = nixpkgs.lib.nixosSystem {
+<<<<<<< HEAD
 	system = "x86_64-linux";
 	  modules = [
+=======
+        system = "x86_64-linux";
+        modules = [
+>>>>>>> c3d9847b30bf6192f80b31b657ba6222a2e51fcb
           ./Hosts/P72/configuration.nix
           home-manager.nixosModules.home-manager
           {
