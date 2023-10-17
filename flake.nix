@@ -30,6 +30,7 @@
      nixosConfigurations = {
       hyprland = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {inherit inputs; }; 
         modules = [
           ./Hosts/P72/configuration.nix
           home-manager.nixosModules.home-manager
@@ -45,6 +46,7 @@
       };
       zellmain = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {inherit inputs; }; 
         modules = [
           ./Hosts/G14/configuration.nix
           nixos-hardware.nixosModules.asus-zephyrus-ga401
