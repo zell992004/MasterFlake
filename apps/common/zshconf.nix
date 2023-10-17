@@ -7,16 +7,16 @@
     enableAutosuggestions = true;
     #dotDir = ".config/zsh";
      history = {
-        enable = true;
+      #  enable = true;
         expireDuplicatesFirst = true;
         save = 100000000;
         size = 1000000000;
         };
-    #syntaxHighlightingModule = {
-    #enable = true;
-  #  styles = 
-  #  "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
-   # };
+    syntaxHighlighting = {
+    enable = true;
+   # styles = "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
+    };
+    
     shellAliases = {
       _ = "sudo";
       h = "history";
@@ -33,7 +33,5 @@
       plugins = [github:amstrad/oh-my-matrix];
       theme = "ZSH_THEME = random";
     };
-
 }
-
 
