@@ -5,13 +5,13 @@
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
-    dotDir = ".config/zsh";
-    history = {
-        enable = true;
-        expireDuplicatesFirst = true;
-        save = 100000000;
-        size = 1000000000;
-        };
+   # dotDir = ".config/zsh";
+   # history = {
+   #     enable = true;
+   #     expireDuplicatesFirst = true;
+   #     save = 100000000;
+   #     size = 1000000000;
+   #     };
     syntaxHighlightingModule = {
     enable = true;
     styles = 

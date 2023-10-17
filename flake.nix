@@ -8,10 +8,11 @@
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
 
- outputs = inputs@{ nixpkgs, home-manager, nixos-hardware, ... }: 
+ outputs = inputs@{ nixpkgs, home-manager, nixos-hardware, hyprland, ... }: 
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -26,9 +27,10 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.zell = ./Hosts/P72/home.nix;
-
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
+          hyprland.homeManagerModules.default
+          {wayland.windowManager.hyprland.enable = true;}
         ];
       };
       zellmain = nixpkgs.lib.nixosSystem {

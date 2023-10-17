@@ -1,5 +1,5 @@
     style = ''
-      @import "themes/mocha.css";
+      @import "./themes/mocha.css";
 
       * {
         font-size: ${toString config.gtk.font.size}px;
