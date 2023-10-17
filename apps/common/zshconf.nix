@@ -17,11 +17,11 @@
     styles = 
     "ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets pattern cursor)";
      };
-    programs.zsh.oh-my-zsh = {
-      enable = true;
-      plugins = "oh-my-matrix";
-      theme = "ZSH_THEME = random";
-    };
+   # programs.zsh.oh-my-zsh = {
+   #   enable = true;
+   #   plugins = "oh-my-matrix";
+   #   theme = "ZSH_THEME = random";
+   # };
     shellAliases = {
       _ = "sudo";
       h = "history";
