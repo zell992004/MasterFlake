@@ -22,7 +22,7 @@
  in{
      packages = withPkgsFor (system: pkgs: {
 	hyprbars = pkgs.callPackage ./hyprbars {
-		inherit (hyprland.packages.${system}) hyprland;
+		inherit (hyprland.packages.x86_64) hyprland;
 		stdenv = pkgs.gcc13Stdenv;
 		};
 	});
