@@ -30,7 +30,7 @@
 
  programs.zsh.oh-my-zsh = {
       enable = true;
-      plugins = "oh-my-matrix";
+      plugins = [github:amstrad/oh-my-matrix];
       theme = "ZSH_THEME = random";
     };
 
