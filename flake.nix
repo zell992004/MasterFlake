@@ -19,12 +19,12 @@
     inherit (hyprland.inputs) nixpkgs;
     withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system.legacyPackages.${system});
 
-        packages = withPkgsFor (system: pkgs: {
-	hyprbars = pkgs.callPackage ./hyprbars {
-		inherit (hyprland.packages.${system}) hyprland;
-		stdenv = pkgs.gcc13Stdenv;
-		};
-	});
+ #       packages = withPkgsFor (system: pkgs: {
+#	hyprbars = pkgs.callPackage ./hyprbars {
+#		inherit (hyprland.packages.${system}) hyprland;
+#		stdenv = pkgs.gcc13Stdenv;
+#		};
+#	});
 
  in{
      nixosConfigurations = {
@@ -61,13 +61,13 @@
       };
     };
 
-    devShells = withPkgsFor (system: pkgs: {
-    	default = pkgs.mkshell.override {stdenv = pkgs.gcc13Stdenv;} {
-		name = "hyprland-plugins";
-		buildInputs = [hyprland.packages.${system}.hyprland];
-		inputsFrom = [hyprland.packages.${system}.hyprland];
-		};
-	});
+#    devShells = withPkgsFor (system: pkgs: {
+#    	default = pkgs.mkshell.override {stdenv = pkgs.gcc13Stdenv;} {
+#		name = "hyprland-plugins";
+#		buildInputs = [hyprland.packages.${system}.hyprland];
+#		inputsFrom = [hyprland.packages.${system}.hyprland];
+#		};
+#	});
 
   };
 }
