@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, home-manager, hyprland, ... }:
 
 {
   imports =
@@ -137,6 +137,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
   programs.hyprland ={
     enable = true;
     portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     xwayland.enable = true;
     enableNvidiaPatches = true;
   };
