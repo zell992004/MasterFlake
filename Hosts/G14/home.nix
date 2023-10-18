@@ -38,7 +38,7 @@
 
     gtk = {
       enable = true;
-      font.package = [Font Awesome 6 Free];
+      font.package = ["Font Awesome 6 Free"];
 
-    }
+    };
 }
