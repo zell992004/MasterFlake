@@ -73,7 +73,7 @@ general {
     layout = master
 
     # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
-    #allow_tearing = false
+    allow_tearing = false
 }
 
 decoration {
