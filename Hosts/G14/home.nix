@@ -35,4 +35,10 @@
     discord
     cura
     ];
+
+    gtk = {
+      enable = true;
+      font.package = [Font Awesome 6 Free];
+
+    }
 }
