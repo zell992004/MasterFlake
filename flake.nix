@@ -44,7 +44,7 @@
           {wayland.windowManager.hyprland.enable = true;}
         ];
       };
-     };
+     
       zellmain = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs; }; 
@@ -60,7 +60,7 @@
             
         ];
       };
- 
+     };
 
 #    devShells = withPkgsFor (system: pkgs: {
 #    	default = pkgs.mkshell.override {stdenv = pkgs.gcc13Stdenv;} {
