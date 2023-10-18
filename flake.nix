@@ -56,6 +56,8 @@
               home-manager.useUserPackages = true;
               home-manager.users.zell = ./Hosts/G14/home.nix;
             }
+            hyprland.homeManagerModules.default
+          {wayland.windowManager.hyprland.enable = true;}
         ];
       };
     };
