@@ -15,7 +15,9 @@ in
   programs.waybar = {
     enable = true;
     package = waybar-hyprland;
-    syle = { css = "./themes/mocha.css";};
+#    style = {
+#       css = {"./themes/mocha.css"}
+#       };
 
     settings = with pkgs; {
       topBar = {

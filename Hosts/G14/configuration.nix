@@ -172,5 +172,6 @@ xdg = {
     programs.steam = {
         enable = true;
     };
+    programs.waybar.enable = true;
 
   }
