@@ -15,7 +15,7 @@
  outputs = inputs@{ nixpkgs, home-manager, nixos-hardware, hyprland, self, ... }: 
   let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+ #   pkgs = nixpkgs.legacyPackages.${system};
     inherit (hyprland.inputs) nixpkgs;
     withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system.legacyPackages.${system});
 
