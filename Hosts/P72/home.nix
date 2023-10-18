@@ -36,10 +36,6 @@
     lshw
     htop
     nvtop
-    bloodhound
-    crackmapexec
-    nmap
-    chisel
     git
     ];
 }
