@@ -62,7 +62,7 @@ input {
 }
 
 general {
-    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+    # See 1for more
 
     gaps_in = 5
     gaps_out = 3
