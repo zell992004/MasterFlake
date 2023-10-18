@@ -8,15 +8,13 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../apps/common/zshconf.nix
+      # ../../apps/common/zshconf.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.kernelModules = [ "nvidia" ];
-  
-
   networking.hostName = "hyprland"; # Define your hostname.
 #  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -112,6 +110,7 @@
   environment.systemPackages = with pkgs; [
     chromium
     github-desktop
+    waybar
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
@@ -192,6 +191,6 @@ xdg = {
 
   programs.steam = {
         enable = true;
-
     };
+    programs.zsh.enable = true;
 }
