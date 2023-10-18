@@ -12,12 +12,12 @@
   };
 
 
- outputs = inputs@{ nixpkgs, home-manager, nixos-hardware, hyprland, self, ... }: 
+ outputs = inputs@{ nixpkgs,home-manager, nixos-hardware, hyprland, self,  ... }: 
   let
     system = "x86_64-linux";
  #   pkgs = nixpkgs.legacyPackages.${system};
     inherit (hyprland.inputs) nixpkgs;
-    withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system.legacyPackages.${system});
+ #   withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system.legacyPackages.${system});
 
  #       packages = withPkgsFor (system: pkgs: {
 #	hyprbars = pkgs.callPackage ./hyprbars {
@@ -35,8 +35,8 @@
           ./Hosts/P72/configuration.nix
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+          #  home-manager.useGlobalPkgs = true;
+          #  home-manager.useUserPackages = true;
             home-manager.users.zell = ./Hosts/P72/home.nix;
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
