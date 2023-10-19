@@ -17,50 +17,118 @@ in
     enable = true;
     package = waybar-hyprland;
     style =''
-  
-  * {
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    margin: 0;
-    font-size: 11px;
-  }
+      @import "waybar/themes/mocha.css";
 
-  window#waybar {
-    background: #292828;
-    color: #ffffff;
-  }
-  
-  #custom-logo {
-    font-size: 18px;
-    margin: 0;
-    margin-left: 7px;
-    margin-right: 12px;
-    padding: 0;
-    font-family: NotoSans Nerd Font Mono;
-  }
-  
-  #workspaces button {
-    margin-right: 10px;
-    color: #ffffff;
-  }
-  #workspaces button:hover, #workspaces button:active {
-    background-color: #292828;
-    color: #ffffff;
-  }
-  #workspaces button.focused {
-    background-color: #383737;
-  }
+      * {
+        font-size: ${toString config.gtk.font.size}px;
+        font-family: ${config.gtk.font.name}, "Font Awesome 6 Free";
+        font-weight: bold;
+        border-radius: 2px;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+      }
 
-  #language {
-    margin-right: 7px;		
-  }
+      tooltip {
+        background: @crust;
+      }
 
-  #battery {
-    margin-left: 7px;
-    margin-right: 3px;
-  }
-  '';
+      window#waybar {
+        /* background: transparent; */
+        background: @base;
+        border-bottom: 2px solid @mantle;
+      }
+
+      * :hover {
+        box-shadow: none;
+        text-shadow: none;
+        border: none;
+        background: transparent;
+      }
+
+      .modules-left,
+      .modules-center,
+      .modules-right {
+        border-bottom: 2px solid @mantle;
+      }
+
+      .modules-left,
+      .modules-center {
+        background: @base;
+      }
+
+      .modules-left {
+        padding: 0 5px;
+      }
+
+      #clock,
+      #custom-medialeft,
+      #custom-media,
+      #custom-mediaright,
+      #pulseaudio,
+      #temperature,
+      #custom-fan,
+      #network
+      #battery {
+        color: @text;
+        margin: 0 6px;
+        padding: 0 5px;
+        background: @base;
+      }
+
+      #network {
+        margin: 0 10 0 5px;
+      }
+      #battery {
+        margin: 0 15 0 5px;
+      }
+
+      #clock {
+        border: none;
+      }
+
+      #workspaces button {
+        color: @text;
+      }
+
+      #workspaces button.active {
+        color: @pink;
+      }
+
+      #custom-media {
+        margin: 0;
+        padding: 0;
+        border-left-style: none;
+        border-right-style: none;
+        border-radius: 0;
+      }
+      #custom-medialeft {
+        padding: 0 5px;
+        border-radius: 2px 0 0 2px;
+        border-right-style: none;
+        margin: 0 0 0 5px;
+      }
+      #custom-mediaright {
+        padding: 0 5px;
+        border-radius: 0 2px 2px 0;
+        border-left-style: none;
+        margin: 0 5px 0 0;
+      }
+
+      #battery {
+        margin: 0 0 0 5px;
+      }
+
+      #battery.warning {
+        color: @peach;
+      }
+      #battery.critical {
+        color: @red;
+      }
+      #battery.charging {
+        color: @green;
+      }
+    '';
 
 
     settings = with pkgs; {
