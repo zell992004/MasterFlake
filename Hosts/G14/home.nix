@@ -22,7 +22,6 @@
     zsh
     firefox
     barrier
-    hyprland
     obsidian
     vscode-fhs
     unzip
@@ -34,11 +33,11 @@
     lshw
     discord
     cura
+    font-awesome
+    vimPlugins.vim-nix
     ];
 
     gtk = {
       enable = true;
-      font.package = ["Font Awesome 6 Free"];
-
     };
 }
