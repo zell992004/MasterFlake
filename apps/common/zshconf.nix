@@ -1,4 +1,5 @@
 
+  {pkgs, ...}:
   { # ZSH
  # programs.nano.syntaxHighlighting = true;
   programs.zsh = {
