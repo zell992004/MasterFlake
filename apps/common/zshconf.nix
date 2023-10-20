@@ -25,7 +25,7 @@
       h = "history";
       hg = "history | grep ";
       n = "sudo nixos-rebuild switch --flake MasterFlake/#";
-      matrix = "python ~/MasterFlake/apps/common/plugins/matrix.py";
+      matrix = "python ~/MasterFlake/apps/common/Plugins/matrix.py";
       clrgenhist = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2";
       zsh_theme_enable = "prompt_powerlevel9k_teardown";
       zsh_theme_disable = "prompt_powerlevel9k_setup";
