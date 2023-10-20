@@ -192,7 +192,7 @@ xdg = {
         sync.enable = true;
         offload = {
           enable = false;
-          enableOffLoadCmd = false;
+          enableOffloadCmd = false;
         };
         amdgpuBusId = "PCI:4:0:0";
         nvidiaBusId = "PCI:1:0:0";
