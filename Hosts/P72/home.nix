@@ -1,6 +1,6 @@
 { config, pkgs, home-manager, self, inputs, lib, ...}:
 let
-  ohMyMatrix = import ../../../oh-my-matrix.nix {inherit lib;};
+#  ohMyMatrix = import ../../../oh-my-matrix.nix {inherit lib;};
 in 
 {
   # if you config gets too long, split it up into smaller modules
@@ -39,6 +39,6 @@ in
     htop
     nvtop
     git
-    ohMyMatrix
+#    ohMyMatrix
     ];
 }
