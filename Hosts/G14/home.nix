@@ -23,7 +23,7 @@ in
   };
   # List of user programs
   home.packages = with pkgs; [
-    oh-my-matrix
+ #   oh-my-matrix
     zsh
     firefox
     barrier
