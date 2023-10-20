@@ -1,7 +1,7 @@
 { config, pkgs, home-manager, self, inputs, lib, nixpkgs, ...}:
 
 let
-  oh-my-matrix = import ./apps/common/oh-my-matrix.nix {inherit lib;};
+  oh-my-matrix = import ../../apps/common/oh-my-matrix.nix {inherit lib;};
 in 
 
 {
