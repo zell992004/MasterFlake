@@ -3,8 +3,9 @@
     programs.vscode = {
         enable = true;
         mutableExtensionsDir = true;
-        package = (import inputs.nixpkgs-vscode1 {
+        package = (import inputs.nixpkgs-vscodes {
             system = pkgs.system;
+            config.allowUnfree = true;
         })
         .vscode;
     };

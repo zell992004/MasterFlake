@@ -13,7 +13,7 @@
   };
 
 
- outputs = inputs@{ nixpkgs,home-manager, nixos-hardware, hyprland, self,  ... }: 
+ outputs = inputs@{ nixpkgs,home-manager, nixos-hardware, hyprland, self, ... }: 
   let
     system = "x86_64-linux";
  #   pkgs = nixpkgs.legacyPackages.${system};
