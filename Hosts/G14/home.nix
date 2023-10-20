@@ -1,7 +1,7 @@
 { config, pkgs, home-manager, self, inputs, lib, ...}:
 
 let
-  ohMyMatrix = import ./apps/common/Plugins/oh-my-matrix.nix {inherit lib;}
+  oh-my-matrix = import ./apps/common/oh-my-matrix.nix {inherit lib;};
 in 
 
 {
@@ -44,5 +44,14 @@ in
 
     gtk = {
       enable = true;
+    };
+
+    packages.x86_64-linux.oh-my-matrix = nixpkgs.stdenv.mkDerivation {
+      name = "oh-my-matrix";
+      src = self.oh-my-matrix;  # Point to the directory structure in your flake.
+      installPhase = ''
+        mkdir -p $out~/.oh-my-zhs/custom/plugins/oh-my-matrix
+        cp -r $src/Plugins/oh-my-zsh/oh-my-matrix/* $out~/.oh-my-zsh/custom/plugins/oh-my-matrix
+      '';
     };
 }

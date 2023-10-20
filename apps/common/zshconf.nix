@@ -32,7 +32,7 @@
 
  programs.zsh.oh-my-zsh = {
       enable = true;
-      plugins = [ohMyMatrix];
+      plugins = [oh-my-matrix];
       theme = "ZSH_THEME = amuse";
     };
 }
