@@ -4,8 +4,5 @@
         enable = true;
         package = (import inputs.nixpkgs-vscode1);
         mutableExtensionsDir = true;
-	userSettings = {
-		"window.titleBarStyle": "custom";
-	};
     };
 }
