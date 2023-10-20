@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, self, hyprland, home-manager, inputs, ... }:
+{ config, pkgs, self, hyprland, home-manager, inputs, lib, ... }:
 
 {
   imports =
@@ -88,7 +88,12 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
+  nixpkgs.config.allowUnfreePredicate = pkg: 
+    builtins.elem(lib.getName pkg) [
+      "nvidia-x11"
+      "nvidia-settings"
+    ];
+  
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -172,5 +177,30 @@ xdg = {
     programs.steam = {
         enable = true;
     };
+
+    hardware.opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+
+    hardware.nvidia = {
+      modesetting.enable = true;
+      open = true;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      prime = {
+        sync.enable = true;
+        offload = {
+          enable = false;
+          enableOffloadCmd = false;
+        };
+        amdgpuBusId = "PCI:4:0:0";
+        nvidiaBusId = "PCI:1:0:0";
+      }; 
+    };
+
+
+
 
   }

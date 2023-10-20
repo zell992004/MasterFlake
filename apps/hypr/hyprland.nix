@@ -73,10 +73,10 @@ general {
     layout = master
 
     # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
-    allow_tearing = true
+    # allow_tearing = true
 }
 
-env = WLR_DRM_NO_ATOMIC,1
+#env = WLR_DRM_NO_ATOMIC,1
 
 decoration {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more

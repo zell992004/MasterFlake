@@ -1,5 +1,7 @@
-{ config, pkgs, home-manager, self, inputs, ...}:
-
+{ config, pkgs, home-manager, self, inputs, lib, ...}:
+let
+#  ohMyMatrix = import ../../../oh-my-matrix.nix {inherit lib;};
+in 
 {
   # if you config gets too long, split it up into smaller modules
   imports = [
@@ -26,7 +28,7 @@
     mpvpaper
     mc
     obsidian
-    vscode-fhs
+    vscode
     unzip
     dunst
     dolphin
@@ -37,5 +39,6 @@
     htop
     nvtop
     git
+#    ohMyMatrix
     ];
 }
