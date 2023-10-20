@@ -1,7 +1,7 @@
 {
     imports = [
           #    ../apps/steam.nix
-    ../apps/code.nix
+    ../code.nix
     ../hypr/hyprland.nix
     ../hypr/waybar.nix
     ./barrier.nix
