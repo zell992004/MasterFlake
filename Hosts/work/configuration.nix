@@ -127,5 +127,35 @@
   system.stateVersion = "23.05"; # Did you read the comment?
 
 	nix.settings.experimental-features = [ "nix-command" "flakes"];
+		programs.hyprland ={
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    xwayland.enable = true;
+    enableNvidiaPatches = true;
+  };
+
+  services.xserver = {
+    enable = true;
+   videoDrivers = [ "nvidia" ];
+    displayManager.gdm = {
+      enable = true;
+      wayland = true;
+    };
+  };
+
+  services.avahi.enable  = true;
+
+xdg = {
+  sounds.enable = true;
+  autostart.enable = true;
+      portal = {
+        enable = true;
+        wlr.enable = true;
+        xdgOpenUsePortal = true;
+     # extraPortals = [ pkgs.xdg-desktop-portal-hyprland 
+      #  ];
+      };
+   };
 
 }
