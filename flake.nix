@@ -59,23 +59,23 @@
         ];
       };
 
-      	nixosConfigurations = {
-		work = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
-			specialArgs = {inherit inputs; };
-			modules = [
-				nixos-hardware.nixosModules.lenovo-thinkpad-t480
-				./configuration.nix
-				home-manager.nixosModules.home-manager
-					{
-					home-manager.useGlobalPkgs = true;
-					home-manager.useUserPackages = true;
-					home-manager.users.peter = ./home.nix;
-					}
-				];
-			};
+      	
+		      work = nixpkgs.lib.nixosSystem {
+			      system = "x86_64-linux";
+			      specialArgs = {inherit inputs; };
+			    modules = [
+				    nixos-hardware.nixosModules.lenovo-thinkpad-t480
+				    ./Hosts/work/configuration.nix
+				    home-manager.nixosModules.home-manager
+					    {
+					    home-manager.useGlobalPkgs = true;
+					    home-manager.useUserPackages = true;
+					    home-manager.users.peter = ./Hosts/work/home.nix;
+					    }
+				  ];
+			  
 
-     };
+      };
 
 #    devShells = withPkgsFor (system: pkgs: {
 #    	default = pkgs.mkshell.override {stdenv = pkgs.gcc13Stdenv;} {
