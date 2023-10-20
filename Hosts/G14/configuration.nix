@@ -87,8 +87,12 @@
   # services.xserver.displayManager.autoLogin.user = "zell";
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
+  nixpkgs.config.allowUnfreePredicate = pkg: 
+    builtins.elem(lib.getname pkg) [
+      "nvidia-x11"
+      "nvidia-settings"
+    ];
+  
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -172,5 +176,30 @@ xdg = {
     programs.steam = {
         enable = true;
     };
+
+    hardware.opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+
+    hardware.nvidia = {
+      modesetting.enable = true;
+      open = true;
+      nvidiaSettins = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      prime = {
+        sync.enable = true;
+        offload = {
+          enable = false;
+          enableOffLoadCmd = false;
+        };
+        amdgpuBusId = "PCI:4:0:0";
+        nvidiaBusId = "PCI:1:0:0";
+      }; 
+    };
+
+
+
 
   }
