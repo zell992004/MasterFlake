@@ -5,7 +5,7 @@
         package = (import inputs.nixpkgs-vscode1 {
             system = pkgs.system;
         })
-        .vscode1;
+        .vscode;
         mutableExtensionsDir = true;
     };
 }

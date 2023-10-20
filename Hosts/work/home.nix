@@ -36,7 +36,7 @@
     htop
     nvtop
     git
-    vscode1
+    vscode
     ];
 
   # This value determines the Home Manager release that your
