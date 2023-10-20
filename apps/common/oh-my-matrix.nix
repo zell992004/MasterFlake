@@ -8,7 +8,7 @@
   outputs = { self, nixpkgs, ... }:
   {
     packages.x86_64-linux.oh-my-matrix = nixpkgs.stdenv.mkDerivation {
-      name = "ohMyMatrix";
+      name = "oh-my-matrix";
       src = self.oh-my-matrix;  # Point to the directory structure in your flake.
       installPhase = ''
         mkdir -p $out~/.oh-my-zhs/custom/plugins/oh-my-matrix
