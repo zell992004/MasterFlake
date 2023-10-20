@@ -1,6 +1,6 @@
 {
     let
-        pkgs = import (buitins.fetchGit {
+        vscode1 = import (buitins.fetchGit {
             name = "old-code";
             url = "https://github.com/NixOS/nixpkgs";
             ref = "refs/heads/nixpkgs-unstable";
@@ -11,7 +11,7 @@
     in 
     programs.vscode = {
         enable = true;
-        package = pkgs.vscode;
+        package = vscode1;
         mutableExtensionsDir = true;
 	userSettings = {
 		"window.titleBarStyle": "custom";

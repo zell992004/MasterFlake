@@ -28,7 +28,7 @@ in
     mpvpaper
     mc
     obsidian
-    vscode-fhs
+    vscode
     unzip
     dunst
     dolphin
