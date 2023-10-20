@@ -1,6 +1,6 @@
 { config, pkgs, home-manager, self, inputs, lib, ...}:
 let
-  oh-my-matrix = import ../../apps/common/oh-my-matrix.nix {inherit lib;};
+  oh-my-matrix = import ../../../../oh-my-matrix.nix {inherit lib;};
 in 
 {
   # if you config gets too long, split it up into smaller modules
