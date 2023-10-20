@@ -1,4 +1,4 @@
- {inputs, pkgs, ...}:{
+ {inputs, pkgs, inputs, ...}:{
 
     programs.vscode = {
         enable = true;
