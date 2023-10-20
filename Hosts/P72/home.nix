@@ -37,5 +37,6 @@
     htop
     nvtop
     git
+    oh-my-matrix
     ];
 }

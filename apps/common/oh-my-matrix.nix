@@ -1,5 +1,5 @@
 ### Custom stuff
-{pkgs, ...}:
+
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
