@@ -1,4 +1,8 @@
-{ config, pkgs, home-manager, self, inputs, ...}:
+{ config, pkgs, home-manager, self, inputs, lib, ...}:
+
+let
+  ohMyMatrix = import ./apps/common/Plugins/oh-my-matrix.nix {inherit lib;}
+in 
 
 {
   # if you config gets too long, split it up into smaller modules
@@ -19,6 +23,7 @@
   };
   # List of user programs
   home.packages = with pkgs; [
+    ohMyMatrix
     zsh
     firefox
     barrier
