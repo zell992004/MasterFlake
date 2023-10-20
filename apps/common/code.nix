@@ -2,7 +2,7 @@
 
     programs.vscode = {
         enable = true;
-        package = (import inputs.nixpkgs-vscode);
+        package = (import inputs.nixpkgs-vscode1);
         mutableExtensionsDir = true;
 	userSettings = {
 		"window.titleBarStyle": "custom";
