@@ -36,6 +36,7 @@
     htop
     nvtop
     git
+    pkgs-vscode
     ];
 
   # This value determines the Home Manager release that your
