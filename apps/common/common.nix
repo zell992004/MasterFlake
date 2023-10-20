@@ -1,4 +1,4 @@
-{
+{ ... }:{
     imports = [
           #    ../apps/steam.nix
     ./code.nix
