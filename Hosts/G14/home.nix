@@ -1,4 +1,4 @@
-{ config, pkgs,sops-nix, home-manager, self, inputs, lib, nixpkgs, ...}:
+{ config, pkgs, home-manager, self, inputs, lib, nixpkgs, ...}:
 
 {
   # if you config gets too long, split it up into smaller modules

@@ -200,10 +200,7 @@ xdg = {
       }; 
     };
 
-      home-manager.sharedModules = [
-    <sops-nix/modules/home-manager/sops.nix>
-  ];
-
-      systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
-
+#      home-manager.sharedModules = [
+#    sops-nix/modules/home-manager/sops.nix
+#  ];
   }

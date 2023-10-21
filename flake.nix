@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixpkgs-vscode.url = "github:nixos/nixpkgs/db9208ab987cdeeedf78ad9b4cf3c55f5ebd269b";
-    sops-nix.url = "github:mic92/sops-nix";
+   # sops-nix.url = "github:mic92/sops-nix";
    # nixpkgs-oh-my-matrix.dir = "./apps/oh-my-matrix.nix";
     home-manager = {
        url = "github:nix-community/home-manager";
@@ -38,12 +38,11 @@
      
       zellmain = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {inherit inputs; }; 
+        specialArgs = {inherit inputs sops-nix; }; 
         modules = [
           ./Hosts/G14/configuration.nix
           nixos-hardware.nixosModules.asus-zephyrus-ga401
           home-manager.nixosModules.home-manager
-          sops-nix.nixosModules.sops
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
