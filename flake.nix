@@ -14,16 +14,7 @@
  outputs = inputs@{ nixpkgs,home-manager, nixos-hardware, hyprland, self, ... }: 
   let
     system = "x86_64-linux";
- #   pkgs = nixpkgs.legacyPackages.${system};
     inherit (hyprland.inputs) nixpkgs;
- #   withPkgsFor = fn: nixpkgs.lib.genAttrs (builtins.attrNames hyprland.packages) (system: fn system.legacyPackages.${system});
-
- #       packages = withPkgsFor (system: pkgs: {
-#	hyprbars = pkgs.callPackage ./hyprbars {
-#		inherit (hyprland.packages.${system}) hyprland;
-#		stdenv = pkgs.gcc13Stdenv;
-#		};
-#	});
 
  in{
      nixosConfigurations = {
@@ -54,6 +45,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.zell = ./Hosts/G14/home.nix;
+              home-manager.extraSpecialArgs = {inherit inputs;};
             }
             
         ];
@@ -73,18 +65,7 @@
 					    home-manager.users.peter = ./Hosts/work/home.nix;
 					    }
 				  ];
-			  
-
       };
-
-#    devShells = withPkgsFor (system: pkgs: {
-#    	default = pkgs.mkshell.override {stdenv = pkgs.gcc13Stdenv;} {
-#		name = "hyprland-plugins";
-#		buildInputs = [hyprland.packages.${system}.hyprland];
-#		inputsFrom = [hyprland.packages.${system}.hyprland];
-#		};
-#	});
-
   };
 };
 }
