@@ -308,11 +308,11 @@ label:focus {
     settings = with pkgs; {
       topBar = {
         layer = "top";
-        position = "bottom";
+        position = "top";
 
         modules-left = [ "clock" ];
 
-        modules-center = [ "wlr/workspaces" ];
+        modules-center = [ "hyprland/workspaces" ];
 
         modules-right = [
           "custom/medialeft"
