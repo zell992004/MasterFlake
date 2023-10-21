@@ -4,6 +4,7 @@
   # if you config gets too long, split it up into smaller modules
   imports = [
       ../../apps/common/common.nix
+      <sops-nix/modules/home-manager/sops.nix>
     ];
     
   # The User and Path it manages
