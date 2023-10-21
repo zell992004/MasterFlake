@@ -1,10 +1,9 @@
-{ config, pkgs, home-manager, self, inputs, lib, nixpkgs, ...}:
+{ config, pkgs,sops-nix, home-manager, self, inputs, lib, nixpkgs, ...}:
 
 {
   # if you config gets too long, split it up into smaller modules
   imports = [
       ../../apps/common/common.nix
-      <sops-nix/modules/home-manager/sops.nix>
     ];
     
   # The User and Path it manages
