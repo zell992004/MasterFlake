@@ -19,13 +19,12 @@
   };
   # List of user programs
   home.packages = with pkgs; [
- #   oh-my-matrix
+   # oh-my-matrix
     zsh
     firefox
     barrier
     obsidian
     unzip
-    dunst
     dolphin
     transmission
     nvtop

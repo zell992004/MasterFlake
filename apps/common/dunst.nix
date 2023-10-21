@@ -5,7 +5,7 @@
         enable = true;
         iconTheme = {
               name = "hicolor";
-              package = <derivation hicolor-icon-theme-0.17>;
+              package = pkgs.hicolor-icon-theme;
               size = "32x32";
         };
         settings = {

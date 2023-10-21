@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixpkgs-vscode.url = "github:nixos/nixpkgs/db9208ab987cdeeedf78ad9b4cf3c55f5ebd269b";
+   # nixpkgs-oh-my-matrix.dir = "./apps/oh-my-matrix.nix";
     home-manager = {
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
@@ -66,6 +67,8 @@
 					    }
 				  ];
       };
+
+
   };
 };
 }
