@@ -37,7 +37,8 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.zell = ./Hosts/P72/home.nix;
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix like this
+            home-manager.extraSpecialArgs = {inherit inputs;};
           }
           ];
       };
