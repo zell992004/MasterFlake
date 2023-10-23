@@ -132,9 +132,9 @@
     enable = true;
    videoDrivers = [ "nvidia" ];
       displayManager = {
-        lightdm = {
-          enable = true;
-        };
+     #   lightdm = {
+      #    enable = true;
+      #  };
         cinnamon = {
           enable = true;
         };
