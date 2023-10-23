@@ -139,9 +139,9 @@
         enable = true;
         wayland = true;
       };
-      desktopManager = {
-        cinnamon.enable = true;
       };
+        desktopManager = {
+        cinnamon.enable = true;
       };
   };
 
