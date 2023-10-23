@@ -38,7 +38,7 @@
      
       zellmain = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {inherit inputs }; 
+        specialArgs = {inherit inputs; }; 
         modules = [
           ./Hosts/G14/configuration.nix
           nixos-hardware.nixosModules.asus-zephyrus-ga401
