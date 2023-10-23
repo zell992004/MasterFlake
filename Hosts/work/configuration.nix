@@ -42,10 +42,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the Cinnamon Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
-
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -135,10 +131,18 @@
   services.xserver = {
     enable = true;
    videoDrivers = [ "nvidia" ];
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-    };
+      displayManager = {
+        lightdm = {
+          enable = true;
+        };
+        cinnamon = {
+          enable = true;
+        };
+        gdm = {
+        enable = true;
+        wayland = true;
+      };
+      };
   };
 
   services.avahi.enable  = true;
