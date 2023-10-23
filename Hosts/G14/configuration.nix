@@ -78,7 +78,7 @@
   users.users.zell = {
     isNormalUser = true;
     description = "zell";
-    extraGroups = [ "networkmahistnager" "wheel" "plocate" "vboxusers"];
+    extraGroups = [ "networkmanager" "wheel" "plocate" "vboxusers"];
     packages = with pkgs; [
     #  thunderbird
     ];

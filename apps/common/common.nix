@@ -11,5 +11,6 @@
     ./neovim.nix
     ./dunst.nix
      ./smallsnips.nix
+     ./catppuccin.nix
     ];
 }
