@@ -135,12 +135,12 @@
      #   lightdm = {
       #    enable = true;
       #  };
-        cinnamon = {
-          enable = true;
-        };
         gdm = {
         enable = true;
         wayland = true;
+      };
+      desktopManager = {
+        cinnamon.enable = true;
       };
       };
   };
