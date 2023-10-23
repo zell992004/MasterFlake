@@ -18,6 +18,8 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   services.xserver.desktopManager.cinnamon.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  security.polkit.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -109,11 +111,11 @@
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+   programs.mtr.enable = true;
+   programs.gnupg.agent = {
+     enable = true;
+     enableSSHSupport = true;
+   };
   
   users.defaultUserShell = pkgs.zsh;
 
