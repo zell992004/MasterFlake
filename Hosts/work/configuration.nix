@@ -159,4 +159,7 @@ xdg = {
       };
    };
 
+     users.defaultUserShell = pkgs.zsh;
+
+
 }
